@@ -1,0 +1,11 @@
+# Зробити зрізи рядків
+n = str(input())
+print(n[2])
+print(n[-2])
+print(n[0:5])
+print(n[0:-2])
+print(n[0::2])
+print(n[1::2])
+print(n[::-1])
+print(n[::-2])
+print(len(n))

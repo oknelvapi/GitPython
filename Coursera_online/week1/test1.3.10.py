@@ -1,0 +1,5 @@
+h = int(input())
+a = int(input())
+b = int(input())
+# print((h // (a - b))-b)
+print(h // 1-a+b)
