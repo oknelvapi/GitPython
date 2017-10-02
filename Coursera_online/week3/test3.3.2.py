@@ -12,4 +12,4 @@ elif len(s) == (f + f1+1):
     print(f)
 else:   # Коли літер 2 і більше, виводимо першу і останню літери
     print(f, len(s)-1-f1)
-print(s[f:-1])
+# print(s[f:-1])
