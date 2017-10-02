@@ -12,3 +12,4 @@ def power(a, n):
 a = int(input())
 n = int(input())
 print(power(a, n))
+# ЗАДАЧА ВИКОНАНА НЕ ПРАВИЛЬНО!
