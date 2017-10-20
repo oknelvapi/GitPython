@@ -8,19 +8,23 @@
 # необходимо для каждого селения определить ближайшее к нему бомбоубежище.
 
 cities = int(input())  # вводим кол-во поселений
-citiesList = list(map(int, input().split()))  # расстояние от начала дороги до i-го селения
+# расстояние от начала дороги до i-го селения:
+citiesList = list(map(int, input().split()))
 toc = []  # список кортежей из расстояния i-го селения и его индекс
 shelters = int(input())  # вводим кол-во бомбоубежищ
-sheltersList = list(map(int, input().split()))  # расстояние от начала дороги до j-го бомбоуб.
+# расстояние от начала дороги до j-го бомбоуб:
+sheltersList = list(map(int, input().split()))
 tos = []  # список кортежей из расстояния j-го бомбоуб. и его индекс
-indS = []  # вывод списка номеров бомбоуб. для селений с 1го по i-тое
-
 for i in range(cities):
     toc.append((int(citiesList[i]), i+1))
-toc.sort()
-
 for j in range(shelters):
     tos.append((int(sheltersList[j]), j+1))
-tos.sort()
-
-print(toc, tos, end='')
+indS = []  # вывод списка номеров бомбоуб. для селений с 1го по i-тое
+for i in toc:
+    tocDist = []
+    for j in tos:
+        tocDist.append((abs(i[0]-j[0]), i[1], j[1]))
+    # tocDist = sorted(tocDist)
+    tocDist.sort()
+    indS.append(int(tocDist[0][2]))
+print(*indS)
