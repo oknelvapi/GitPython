@@ -9,11 +9,11 @@
 
 cities = int(input())  # вводим кол-во поселений
 # расстояние от начала дороги до i-го селения:
-citiesList = list(map(int, input().split()))
+citiesList = input().split()
 toc = []  # список кортежей из расстояния i-го селения и его индекс
 shelters = int(input())  # вводим кол-во бомбоубежищ
 # расстояние от начала дороги до j-го бомбоуб:
-sheltersList = list(map(int, input().split()))
+sheltersList = input().split()
 tos = []  # список кортежей из расстояния j-го бомбоуб. и его индекс
 for i in range(cities):
     toc.append((int(citiesList[i]), i+1))

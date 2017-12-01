@@ -18,3 +18,4 @@ for i in a:
     print(*i, file=fout)
 fin.close()
 fout.close()
+
